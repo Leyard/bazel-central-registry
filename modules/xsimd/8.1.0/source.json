@@ -3,7 +3,7 @@
     "integrity": "sha256-1SVRNg03cJZ1I30qBBjij3CZW1t82tfGdGJrz7v0gyg=",
     "strip_prefix": "xsimd-8.1.0",
     "patches": {
-        "add_build_file.patch": "sha256-9a0MJ/S7IRjN6rC3I8CDxxq3eyNojKwevFhDoKtN0rY=",
+        "add_build_file.patch": "sha256-vS0PA3DQzJ7s6Y75iCS7DscqGvTEknd2mzZEqB1c1Nw=",
         "module_dot_bazel.patch": "sha256-YwBlgMHncRPprAhSm7ekjO8ltSSgfK4hy+1J8dyEpGU="
     },
     "patch_strip": 0
