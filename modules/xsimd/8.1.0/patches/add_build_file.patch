@@ -1,6 +1,6 @@
 --- /dev/null
 +++ BUILD.bazel
-@@ -0,0 +1,34 @@
+@@ -0,0 +1,35 @@
 +# Reference: https://github.com/tensorflow/io/blob/v0.25.0/third_party/xsimd.BUILD
 +
 +package(default_visibility = ["//visibility:public"])
@@ -16,6 +16,7 @@
 +        [
 +            "include/xsimd/*.hpp",
 +            "include/xsimd/arch/*.hpp",
++            "include/xsimd/arch/generic/*.hpp",
 +            "include/xsimd/config/*.hpp",
 +            "include/xsimd/math/*.hpp",
 +            "include/xsimd/memory/*.hpp",
