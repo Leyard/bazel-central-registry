@@ -1,0 +1,10 @@
+{
+    "url": "https://github.com/google/flatbuffers/archive/refs/tags/v24.3.6.tar.gz",
+    "integrity": "sha256-XYv79bG0xH9RbnZzZ38OjbDv0y8mL3oUw/1f9n4r2Pw=",
+    "strip_prefix": "flatbuffers-24.3.6",
+    "patches": {
+        "extensions_dot_bzl.patch": "sha256-JwLc+G7gQu2A+xJVjxwCDX8BwJdyspLLeVpnoklWYdM=",
+        "module_dot_bazel.patch": "sha256-s4FXZyGyVH6b9jrALs6MqA7zbLFAClXaBPwlSXh5Kg0="
+    },
+    "patch_strip": 1
+}
