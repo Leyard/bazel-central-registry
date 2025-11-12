@@ -1,0 +1,9 @@
+{
+    "url": "https://github.com/xtensor-stack/xsimd/archive/refs/tags/13.2.0.tar.gz",
+    "integrity": "sha256-7djNPVSMGFrccDIcU8Nt9Bq+ZMH+LGe8bZPD7NqCRHo=",
+    "strip_prefix": "xsimd-13.2.0",
+    "patches": {
+        "module.patch": "sha256-FT7he1ofPtOOrTQ3jFUXTxiouMhSILGjAk4M6GLcMhs="
+    },
+    "patch_strip": 1
+}
