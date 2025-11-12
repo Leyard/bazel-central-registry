@@ -1,0 +1,9 @@
+{
+    "url": "https://github.com/substrait-io/substrait/archive/refs/tags/v0.44.0.tar.gz",
+    "integrity": "sha256-+YmoYvaU59u2lZJd23xM4GqmxRrKlFEFwHUTmu1+VaI=",
+    "strip_prefix": "substrait-0.44.0",
+    "patches": {
+        "module.patch": "sha256-7oVJ4imlXrBK8cqpxJrbA5IuAOrZwd6kwKaluEK+Wc4="
+    },
+    "patch_strip": 1
+}

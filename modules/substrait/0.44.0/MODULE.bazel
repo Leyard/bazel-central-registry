@@ -1,0 +1,6 @@
+module(
+    name = "substrait",
+    version = "0.44.0",
+)
+
+bazel_dep(name = "protobuf", version = "32.0")

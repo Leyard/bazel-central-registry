@@ -1,0 +1,11 @@
+---
+matrix:
+  bazel:
+    - 6.x
+    - 7.x
+tasks:
+  ubuntu2004_build:
+    bazel: ${{ bazel }}
+    platform: ubuntu2004
+    build_targets:
+      - "@substrait//:plan_proto"
