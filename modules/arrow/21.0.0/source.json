@@ -1,0 +1,10 @@
+{
+    "url": "https://github.com/apache/arrow/releases/download/apache-arrow-21.0.0/apache-arrow-21.0.0.tar.gz",
+    "integrity": "sha256-iJb4+oUFSMzfkuzEpfXMSFAGV6WN5WIPGaqF+VhOoZU=",
+    "strip_prefix": "apache-arrow-21.0.0",
+    "patches": {
+        "arrow_fix_includes.patch": "sha256-mPK4ycBS1EAQVScwg0OT0HO1zO8zaKut1SB2N/nlDhQ=",
+        "arrow_add_bazel.patch": "sha256-KdghaxRLdEkPuHgCRxzIVXFfinMCqbhMAdWq8DNiYCE="
+    },
+    "patch_strip": 1
+}

@@ -1,0 +1,16 @@
+{
+    "homepage": "https://arrow.apache.org/",
+    "maintainers": [
+        {
+            "email": "bcr-maintainers@bazel.build",
+            "name": "No Maintainer Specified"
+        }
+    ],
+    "repository": [
+        "github:apache/arrow"
+    ],
+    "versions": [
+        "21.0.0"
+    ],
+    "yanked_versions": {}
+}
