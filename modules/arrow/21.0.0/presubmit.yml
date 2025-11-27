@@ -1,11 +1,14 @@
 ---
 matrix:
   bazel:
-    - 6.x
     - 7.x
+    - 8.x
 tasks:
   ubuntu2004_build:
     bazel: ${{ bazel }}
     platform: ubuntu2004
+    build_flags:
+      - --cxxopt=-std=c++17
+      - --host_cxxopt=-std=c++17
     build_targets:
       - "@arrow//cpp/src/arrow:core"

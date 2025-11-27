@@ -3,8 +3,12 @@ new file mode 100644
 index 0000000000..e3302eaf1c
 --- /dev/null
 +++ b/cpp/src/arrow/BUILD.bazel
-@@ -0,0 +1,225 @@
+@@ -0,0 +1,230 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +# Generate the header file, util/config.h
 +genrule(
@@ -74,6 +78,7 @@ index 0000000000..e3302eaf1c
 +            "util/*.cc",
 +            "vendored/**/*.cpp",
 +            "vendored/**/*.cc",
++            "vendored/**/*.c",
 +            # "testing/*.cc",
 +        ],
 +        exclude = [
@@ -117,7 +122,7 @@ index 0000000000..e3302eaf1c
 +        ":util_config_h",
 +        ":util_config_internal_h",
 +    ],  #  + ["compute/test_util_internal.h"],
-+    copts = [
++    copts = DEFAULT_COPTS + [
 +        # "-DARROW_HAVE_RUNTIME_BMI2",
 +        # "-mbmi2",
 +        # "-DARROW_HAVE_RUNTIME_AVX2",
@@ -202,7 +207,7 @@ index 0000000000..e3302eaf1c
 +        ":util_config_h",
 +        ":util_config_internal_h",
 +    ],
-+    copts = [
++    copts = DEFAULT_COPTS + [
 +        # "-DARROW_HAVE_RUNTIME_BMI2",
 +        # "-mbmi2",
 +        # "-DARROW_HAVE_RUNTIME_AVX2",
@@ -266,7 +271,7 @@ index 0000000000..48186e1f89
 +    ),
 +    include_prefix = "arrow/acero",
 +    strip_include_prefix = "",
-+    copts = [
++    copts = DEFAULT_COPTS + [
 +        # "-DARROW_HAVE_RUNTIME_BMI2",
 +        # "-mbmi2",
 +        # "-DARROW_HAVE_RUNTIME_AVX2",
@@ -290,7 +295,7 @@ new file mode 100644
 index 0000000000..6b8a630fcb
 --- /dev/null
 +++ b/cpp/src/arrow/csv/BUILD.bazel
-@@ -0,0 +1,32 @@
+@@ -0,0 +1,33 @@
 +package(default_visibility = ["//visibility:public"])
 +
 +cc_library(
@@ -315,6 +320,7 @@ index 0000000000..6b8a630fcb
 +    ),
 +    include_prefix = "arrow/csv",
 +    strip_include_prefix = "",
++    copts = DEFAULT_COPTS,
 +    deps = [
 +        "//cpp/src/arrow:core",
 +        "//cpp/src/arrow/ipc:ipc",
@@ -355,7 +361,7 @@ index 0000000000..03673a1469
 +    ),
 +    include_prefix = "arrow/dataset",
 +    strip_include_prefix = "",
-+    copts = [
++    copts = DEFAULT_COPTS + [
 +        # "-DARROW_HAVE_RUNTIME_BMI2",
 +        # "-mbmi2",
 +        # "-DARROW_HAVE_RUNTIME_AVX2",
@@ -414,7 +420,7 @@ index 0000000000..b23a4dc587
 +            "s3*.h",
 +        ],
 +    ),
-+    copts = [
++    copts = DEFAULT_COPTS + [
 +        # "-DARROW_HAVE_RUNTIME_BMI2",
 +        # "-mbmi2",
 +        # "-DARROW_HAVE_RUNTIME_AVX2",
@@ -473,18 +479,18 @@ index 0000000000..93d4c1a269
 +            "**/test_*.h",
 +        ],
 +    ),
-+    # copts = [
-+    #     "-DARROW_HAVE_RUNTIME_BMI2",
-+    #     "-mbmi2",
-+    #     "-DARROW_HAVE_RUNTIME_AVX2",
-+    #     "-mavx2",
-+    #     "-DARROW_HAVE_RUNTIME_AVX512",
-+    #     "-mavx512f",
-+    #     "-mavx512cd",
-+    #     "-mavx512bw",
-+    #     "-mavx512dq",
-+    #     "-mavx512vl",
-+    # ],
++    copts = DEFAULT_COPTS + [
++        # "-DARROW_HAVE_RUNTIME_BMI2",
++        # "-mbmi2",
++        # "-DARROW_HAVE_RUNTIME_AVX2",
++        # "-mavx2",
++        # "-DARROW_HAVE_RUNTIME_AVX512",
++        # "-mavx512f",
++        # "-mavx512cd",
++        # "-mavx512bw",
++        # "-mavx512dq",
++        # "-mavx512vl",
++    ],
 +    include_prefix = "arrow/flight",
 +    strip_include_prefix = "",
 +    deps = [
@@ -504,7 +510,7 @@ new file mode 100644
 index 0000000000..3ce3f939d8
 --- /dev/null
 +++ b/cpp/src/arrow/ipc/BUILD.bazel
-@@ -0,0 +1,69 @@
+@@ -0,0 +1,70 @@
 +package(default_visibility = ["//visibility:public"])
 +
 +
@@ -566,6 +572,7 @@ index 0000000000..3ce3f939d8
 +    include_prefix = "arrow/ipc",
 +    strip_include_prefix = "",
 +    visibility = ["//visibility:public"],
++    copts = DEFAULT_COPTS,
 +    deps = [
 +        "//cpp/src/arrow:core",
 +        # "//format:fbs",
@@ -667,7 +674,7 @@ index 0000000000..936dd2a9bb
 +            "io/hdfs*.h",
 +        ],
 +    ) + [":parquet_version_h"],
-+    copts = [
++    copts = DEFAULT_COPTS + [
 +        # "-DARROW_HAVE_RUNTIME_BMI2",
 +        # "-mbmi2",
 +        # "-DARROW_HAVE_RUNTIME_AVX2",
