@@ -239,8 +239,12 @@ new file mode 100644
 index 0000000000..48186e1f89
 --- /dev/null
 +++ b/cpp/src/arrow/acero/BUILD.bazel
-@@ -0,0 +1,50 @@
+@@ -0,0 +1,54 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +cc_library(
 +    name = "acero",
@@ -295,8 +299,12 @@ new file mode 100644
 index 0000000000..6b8a630fcb
 --- /dev/null
 +++ b/cpp/src/arrow/csv/BUILD.bazel
-@@ -0,0 +1,33 @@
+@@ -0,0 +1,37 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +cc_library(
 +    name = "csv",
@@ -334,8 +342,12 @@ new file mode 100644
 index 0000000000..03673a1469
 --- /dev/null
 +++ b/cpp/src/arrow/dataset/BUILD.bazel
-@@ -0,0 +1,45 @@
+@@ -0,0 +1,49 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +cc_library(
 +    name = "dataset",
@@ -385,8 +397,12 @@ new file mode 100644
 index 0000000000..b23a4dc587
 --- /dev/null
 +++ b/cpp/src/arrow/filesystem/BUILD.bazel
-@@ -0,0 +1,55 @@
+@@ -0,0 +1,59 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +cc_library(
 +    name = "filesystem",
@@ -446,8 +462,12 @@ new file mode 100644
 index 0000000000..93d4c1a269
 --- /dev/null
 +++ b/cpp/src/arrow/flight/BUILD.bazel
-@@ -0,0 +1,58 @@
+@@ -0,0 +1,62 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +cc_library(
 +    name = "flight_grpc_srcs",
@@ -510,8 +530,12 @@ new file mode 100644
 index 0000000000..3ce3f939d8
 --- /dev/null
 +++ b/cpp/src/arrow/ipc/BUILD.bazel
-@@ -0,0 +1,70 @@
+@@ -0,0 +1,74 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +
 +# flatbuffer_cc_library(
@@ -586,8 +610,12 @@ new file mode 100644
 index 0000000000..f10052e0b2
 --- /dev/null
 +++ b/cpp/src/generated/BUILD.bazel
-@@ -0,0 +1,11 @@
+@@ -0,0 +1,15 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +
 +cc_library(
@@ -603,8 +631,12 @@ new file mode 100644
 index 0000000000..936dd2a9bb
 --- /dev/null
 +++ b/cpp/src/parquet/BUILD.bazel
-@@ -0,0 +1,102 @@
+@@ -0,0 +1,106 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +
 +# Generate the header file, parquet_version.h
@@ -711,8 +743,12 @@ new file mode 100644
 index 0000000000..ae18fa70ee
 --- /dev/null
 +++ b/format/BUILD.bazel
-@@ -0,0 +1,79 @@
+@@ -0,0 +1,83 @@
 +package(default_visibility = ["//visibility:public"])
++
++DEFAULT_COPTS = [
++    "-std=c++17",
++]
 +
 +load("@com_github_google_flatbuffers//:build_defs.bzl", "flatbuffer_cc_library")
 +load("@rules_proto_grpc_cpp//:defs.bzl", "cpp_grpc_library")
