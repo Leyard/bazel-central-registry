@@ -4,7 +4,7 @@
     "strip_prefix": "apache-arrow-21.0.0",
     "patches": {
         "arrow_fix_includes.patch": "sha256-mPK4ycBS1EAQVScwg0OT0HO1zO8zaKut1SB2N/nlDhQ=",
-        "arrow_add_bazel.patch": "sha256-ulmpK53SKNcRGoXR656a3Upr4tEVeEBcrfPpkVB8x1k="
+        "arrow_add_bazel.patch": "sha256-TJbXOaEbr/xSw3pBtP3B6RmOUIfwJHoiEIZSUFcKQTE="
     },
     "patch_strip": 1
 }
